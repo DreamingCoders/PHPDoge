@@ -1,5 +1,6 @@
 # PHPDoge
-PHPDoge is an extensive PHP library/framework that supports a custom Doge minified compiler, API connections to Doge, and everything essential to land on the moon.
+PHPDoge is a simple and extensive PHP library/framework.
+This tool supports, a custom Doge minified compiler, API connections to Doge, and everything essential to land on the moon.
 
 ## Purpose
 At first I wanted to make custom Doge commands in PHP, but now I am making this a "framework" that simplifies PHP functions
