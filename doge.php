@@ -1,5 +1,6 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT']."/compiler.php");
+require($_SERVER['DOCUMENT_ROOT']."/transport.php");
 
 if(isset($_GET['c'])){
     if(!isset($command)){
