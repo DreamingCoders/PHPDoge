@@ -9,6 +9,7 @@ $actual_link = "http://".$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]."";
     alert("Loading installation.");
     alert("Installation complete. Please do not delete this file as it is still required for PHPDoge to run.\
           View your application live at: <?=$actual_link?>");
+    $.get("/config.php?installSuccess=true");
   }
 </script>
 
