@@ -21,6 +21,7 @@ if(isset($allowSourceProtection){
     $serverIpAddress = null;
 }
 
+$mvcEnabled = "false";
 $DbHost = "localhost";
 $DbName = "";
 $DbPassword = "";
