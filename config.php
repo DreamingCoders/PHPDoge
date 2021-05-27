@@ -21,4 +21,7 @@ $serverName = "PHPDoge";
 $emptyPageTitles = "PHPDoge - A Powerful PHP framework";
 
 $projectImage = "";
+ 
+$projectAdditives = array("blog", "network");
+
 ?>
