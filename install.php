@@ -23,8 +23,11 @@ $actual_link = "http://".$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]."";
       <div class="card-divider"></div>
       
       <form action="#" method="GET">
-          <input type="text" name="serverName" class="form-control">
-            <input id="installDoge" type="submit" name="submitInstall" class="btn btn-success" value="Install">
+          <input type="text" name="serverName" class="form-control" placeholder="Project name"><br>
+          <input type="checkbox" id="mvc1" name="mvc1" class="form-control" value="Enable MVC"><br>
+        <textarea type="text" name="projectDescription" class="form-control" placeholder="Project description"></textarea><br>
+            <label for="mvc1"> Check to enable MVC (Leave blank if unsure)</label><br>
+              <input id="installDoge" type="submit" name="submitInstall" class="btn btn-success" value="Install">
       </form>
       
     </div>
