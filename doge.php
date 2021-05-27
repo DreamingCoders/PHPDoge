@@ -2,9 +2,11 @@
 require($_SERVER['DOCUMENT_ROOT']."/compiler.php");
 require($_SERVER['DOCUMENT_ROOT']."/transport.php");
 
-if(isset($_GET['c'])){
-    if(!isset($command)){
-        $command = htmlspecialchars($_GET['c']); //dogeSay'hi';
+if(isset($_GET['submitCommand'])){
+    if(isset($_GET['c'])){
+        if(!isset($command)){
+            $command = htmlspecialchars($_GET['c']); //dogeSay'hi';
+        }
     }
 }else{
     // no command found instantiating default method
