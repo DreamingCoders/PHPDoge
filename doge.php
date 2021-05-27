@@ -12,7 +12,7 @@ if(isset($_GET['c'])){
 }
 
 if(!isset($command)){ // use outside else in case of get request not running
-    $command = "dogeSay'test'.";
+    //$command = "dogeSay'test'.";
 }
 
 class deobfuscate{
