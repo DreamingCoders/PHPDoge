@@ -42,6 +42,8 @@ if(isset($installSuccess)){
           <input type="checkbox" id="mvc1" name="mvc1" class="form-control" value="Enable MVC"><br>
         <textarea type="text" name="projectDescription" class="form-control" placeholder="Project description"></textarea><br>
             <label for="mvc1"> Check to enable MVC (Leave blank if unsure)</label><br>
+        <h5>Choose your project type</h5>
+        <p>List of projects, <?=$transportTypes?></p>
               <input id="installDoge" type="submit" name="submitInstall" class="btn btn-success" value="Install">
       </form>
       
