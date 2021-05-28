@@ -1,3 +1,7 @@
+<?php
+// DreamingCoders
+	// Special credits to mkaz
+
 require_once dirname(  __FILE__ ) . '/jsonRPCClient.php';
 
 class Doge  {
