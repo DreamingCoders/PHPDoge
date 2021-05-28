@@ -16,8 +16,19 @@
 <?php
 // Learn
 ?>
+  <h2>Learning!</h2>
 <?php
 // Auth System
+  $successAlert = "<div class='alert alert-success text-center'>Success!</div><br>";
+  $successRedir = "<script>window.location('/');</script>";
+    if(isset($_POST['login'])){
+      $username = htmlentities($_POST['username']);
+        return $successAlert . $successRedir;
+    }
+    if(isset($_POST['register'])){
+      $username = htmlentities($_POST['username']);
+        return $successAlert . $successRedir;
+    }
 ?>
   <div class="row">
     <div class="col-md-6">
