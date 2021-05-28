@@ -9,6 +9,9 @@ By making for example queries run seamlessly.
 I intend to make PHPDoge light meaning it will be minimal and very fast to run in contrast to other frameworks like Laravel.
 
 ## Usage
+### Use DogePay
+You need to have Doge compiled on your server, we will attempt to do this automatically Seems Promising
+https://www.reddit.com/r/dogecoin/comments/2f1ew9/build_dogecoin_on_ubuntu/
 ### Run commands
   * You can run commands by accessing the **doge.php** file and adding the GET request "c" (Command) containing your DOGE code
     * Example https://foobar.com/doge.php?c=dogeSay'Hello'.
