@@ -1,6 +1,21 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT']."/config.php");
 $actual_link = "http://".$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]."";
+
+// Posts
+  // End integral parts
+
+if(isset($_GET['forceInstall']){
+   $forceInstall = htmlentities($_GET['forceInstall']);
+}
+if(isset($installSuccess)){
+  if($installSuccess == "true"){
+    die();
+  }else{
+  }
+}else if(!isset($_GET['forceInstall']){
+  die("PHPDoge has not detected an install, please proceed <a href='?forceInstall=true'>here</a> to continue"); // Encountered an unexpected error, will proceed with possible installation
+}
 ?>
 
 <script>
