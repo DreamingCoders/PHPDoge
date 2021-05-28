@@ -20,8 +20,9 @@ if(isset($allowSourceProtection){
   }else{
     $serverIpAddress = null;
 }
-
-$mvcEnabled = "false";
+require($_SERVER['DOCUMENT_ROOT']."/transport.php");
+// MVC checker
+//$mvcEnabled = "false";
 $DbHost = "localhost";
 $DbName = "";
 $DbPassword = "";
@@ -33,5 +34,4 @@ $emptyPageTitles = "PHPDoge - A Powerful PHP framework";
 $projectImage = "";
  
 $projectAdditives = array("blog", "network");
-
 ?>
