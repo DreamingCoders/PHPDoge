@@ -220,7 +220,7 @@ https://www.reddit.com/r/dogecoin/comments/2f1ew9/build_dogecoin_on_ubuntu/
 
 ## Credits
 Koddn PHP Router
-We use the repository by @koddn and inted to build on to their amazing creation!
+We use the repository by @koddn and intend to build on to their amazing creation!
 
 ### Hello
   * Wow
