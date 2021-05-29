@@ -1,4 +1,6 @@
-<!doctype html>
+<?php
+function navbar(){
+$navbar = '<!doctype html>
 <html>
     <head>
         <title>PHPDoge</title>
@@ -41,4 +43,10 @@
           </form>
         </div>
       </div>
-    </nav>
+    </nav>';
+    echo $navbar;
+}
+
+echo navbar();
+?>
+
