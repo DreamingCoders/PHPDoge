@@ -4,16 +4,26 @@ is a simple and extensive PHP library/framework.
 This tool supports, a custom Doge minified compiler, API connections to Doge, and everything essential to land on the moon.
 
 ## Purpose
-At first I wanted to make custom Doge commands in PHP, but now I am making this a "framework" that simplifies PHP functions
-By making for example queries run seamlessly.
+At first PHPDoge was made as a dogescript language, however it has since advanced in development.
+Now supporting Doge commands in PHP, ability to choose if you want to use an MVC, framework capabilities that simplifies PHP functions
+By making for example queries, routes, and pre-set files run seamlessly.
 I intend to make PHPDoge light meaning it will be minimal and very fast to run in contrast to other frameworks like Laravel.
 
 ## Usage
+
+### Use DogePay
+You need to have Doge compiled on your server, we will attempt to do this automatically Seems Promising
+https://www.reddit.com/r/dogecoin/comments/2f1ew9/build_dogecoin_on_ubuntu/
+### Run commands (Web/CLI)
+  * You can run commands by accessing the **doge.php** file and adding the GET request "c" (Command) containing your DOGE code
+    * Example https://foobar.com/doge.php?c=dogeSay'Hello'.
+    * This will convert the "Dogecode"TM into PHP realtime!
+
 ### Routing
 Use *router.php* for routing, everything below that shows KODDN_ROUTER.php, assume router.php which requires the file.
-We are not using this file and rather router.php
+We are not using this file and rather router.php OR mvc.php if you are using routing with models, views, and controllers.
 
-For mostly MVC related things use *mvc.php* if you want your routing to add changes to MVC
+We are working on delegating this feature to allow easy customization, and encourage users to fork this repository.
 
 This was already documented with php-router, I am leaving this here as I have included them in this repo.
 Simply add src/KODDN_ROUTER.php file in your project;
@@ -212,19 +222,7 @@ $res->setStatus(404)->send('Not Found');
 });
 ```
 
-### Use DogePay
-You need to have Doge compiled on your server, we will attempt to do this automatically Seems Promising
-https://www.reddit.com/r/dogecoin/comments/2f1ew9/build_dogecoin_on_ubuntu/
-### Run commands
-  * You can run commands by accessing the **doge.php** file and adding the GET request "c" (Command) containing your DOGE code
-    * Example https://foobar.com/doge.php?c=dogeSay'Hello'.
-    * This will convert the "Dogecode"TM into PHP realtime!
-
-## Credits
-Koddn PHP Router
-We use the repository by @koddn and intend to build on to their amazing creation!
-
-### Hello
-  * Wow
-  * Fun fact: I wasn't intending to make PHPDoge a framework. I personally do not like frameworks instead raw PHP without an MVC
-   * I am intending on making it functional for those who prefer MVC's or none through multiple transports
+### Credits/Extra
+  * Koddn PHP Router
+    * We use the repository by @koddn and intend to build on to their amazing creation!
+  * Fun fact: I wasn't intending to make PHPDoge a framework. It now is.
