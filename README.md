@@ -10,9 +10,12 @@ I intend to make PHPDoge light meaning it will be minimal and very fast to run i
 
 ## Usage
 ### Routing
-This was already documented with php-router
-Simply add src/KODDN_ROUTER.php file in your project;
+Use *router.php* for routing, everything below that shows KODN_ROUTER.php, assume router.php which requires the file.
+We are not using this file and rather router.php
 
+This was already documented with php-router, I am leaving this here as I have included them in this repo.
+Simply add src/KODDN_ROUTER.php file in your project;
+```php
 // composer auto loader
 require __DIR__ . '/src/KODDN_ROUTER.php';
 
@@ -21,13 +24,14 @@ ROUTER::get('/',function($req,$res,$next){
     // ..do something 
     $res->send("Thanks");
 });
+```
 Patterns
 You can use patterns to match the request
 
 :paramName => named URL segments that are used to capture the values specified at their position in the URL, begin with colon
 => will capture anything
 In the below example we are capturing user id from the url
-
+```php
 // URL => /api/user/111
 
 ROUTER::get('/api/user/:id',function($req,$res){
@@ -55,9 +59,10 @@ ROUTER::get('/*/:postID',function($req,$res){
     // do something
    
 });
+```
 Route Handlers
 We can use multiple callback functions to handle the route
-
+```php
 ROUTER::get('/some-url', function($req,$res,$next){
 
     // Do something here
@@ -72,8 +77,9 @@ ROUTER::get('/some-url', function($req,$res,$next){
     echo "END";  // task completed
     
 });
+```
 Also, if we want the edited request to be referenced in next callback then use &$req as request parameter
-
+```php
 ROUTER::get('/dashboard', function(&$req,$res,$next){
 
     // if user authorized
@@ -104,7 +110,9 @@ ROUTER::post('/login', function(&$req,$res,$next){
   // grantAccessToSomething
     
 });
+```
 Redirect
+```php
 //ROUTER::redirect('/url-to-match', callbackBeforeRedirect, 'redirect to url', $replaceHeaders=false (optional), $redirectCode =301 (optional));
 ROUTER::redirect('/url-to-match', function(){/*do some logs*/}, '/new-url', $replaceHeaders =false/*( boolean optional)*/, $redirectCode=301 /*(int optional)*/);
 Responses
@@ -113,17 +121,23 @@ With Koddn PHP router either you can manually handle responses, or you can use t
 ROUTER::post('/about', function($req,$res,$next){
  $res->send("About us");
 });
+```
 Send JSON data
+```php
 ROUTER::post('/api/user', function($req,$res,$next){
     $userData=['name'=>"Harpal Singh", 'id'=>11];
      $res->json($userData);
 });
+```
 Set Header Status Codes
+```php
 ROUTER::post('/api/user', function($req,$res,$next){
   
      $res->setStatus(404)->send('Not Found');
 });
+```
 Clear cookies
+```php
 ROUTER::post('/api/user', function($req,$res,$next){
      // clear all cookies
      $res->clearCookies();
@@ -134,7 +148,9 @@ ROUTER::post('/api/user', function($req,$res,$next){
      // do something
      
 });
+```
 Clear cookies
+```php
 ROUTER::post('/api/user', function($req,$res,$next){
     // clear Sessions
      $res->clearSession();
@@ -142,16 +158,19 @@ ROUTER::post('/api/user', function($req,$res,$next){
      // do something
      
 });
+```
 End request
 It is similar to die();
-
+```php
 ROUTER::post('/api/user', function($req,$res,$next){
     // clear Sessions
      $res->end();
       // do something
      
 });
+```
 Redirect using Response
+```php
 //ROUTER::redirect('redirect to url', $replaceHeaders=false (optional), $redirectCode =301 (optional));
 ROUTER::post('/api/user', function($req,$res,$next){
     // clear Sessions
@@ -159,7 +178,9 @@ ROUTER::post('/api/user', function($req,$res,$next){
       // do something
      
 });
+```
 ALL Functions
+```php
 ROUTER::any('/url-to-match',function(&$req,$res,$next){}/*, function(&$req,$res,$next){}*/);
 ROUTER::post('/url-to-match',function(&$req,$res,$next){}/*, function(&$req,$res,$next){}*/);
 ROUTER::get('/url-to-match',function(&$req,$res,$next){}/*, function(&$req,$res,$next){}*/);
@@ -187,7 +208,7 @@ $res->clearCookies();
 //set Status
 $res->setStatus(404)->send('Not Found');
 });
-
+```
 
 ### Use DogePay
 You need to have Doge compiled on your server, we will attempt to do this automatically Seems Promising
