@@ -1,6 +1,6 @@
 <?php
 //DreamingCoders
-require $_SERVER['DOCUMENT_ROOT'].'/KODDN_ROUTER.php';
+require $_SERVER['DOCUMENT_ROOT'].'/core/KODDN_ROUTER.php';
 
 <?php
 /**
