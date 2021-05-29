@@ -10,8 +10,10 @@ I intend to make PHPDoge light meaning it will be minimal and very fast to run i
 
 ## Usage
 ### Routing
-Use *router.php* for routing, everything below that shows KODN_ROUTER.php, assume router.php which requires the file.
+Use *router.php* for routing, everything below that shows KODDN_ROUTER.php, assume router.php which requires the file.
 We are not using this file and rather router.php
+
+For mostly MVC related things use *mvc.php* if you want your routing to add changes to MVC
 
 This was already documented with php-router, I am leaving this here as I have included them in this repo.
 Simply add src/KODDN_ROUTER.php file in your project;
