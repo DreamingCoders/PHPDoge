@@ -16,6 +16,35 @@ if(isset($installSuccess)){
 }else if(!isset($_GET['forceInstall']){
   die("PHPDoge has not detected an install, please proceed <a href='?forceInstall=true'>here</a> to continue"); // Encountered an unexpected error, will proceed with possible installation
 }
+if(isset($_POST['submitInstall'])){
+  
+  $serverNamePost = htmlentities($_POST['serverName']);
+  $enableMVCPost = $_POST['mvc1'];
+  $serverDescPost = htmlentities($_POST['projectDescription']);
+  
+  if(isset($serverNamePost)){
+    if(empty($serverNamePost)){
+      $sNP = "PHPDoge";
+    }
+  }else{
+    $sNP = "PHPDoge";
+  }
+  if(isset($enableMVCPost)){
+    if(empty($enableMVCPost)){
+      $eMVCP = "false";
+    }
+  }else{
+    $eMVCP = "false";
+  }
+  if(isset($serverDescPost)){
+    if(empty($serverDescPost)){
+      $sDP = "Welcome to my website";
+    }
+  }else{
+    $sDP = "Welcome to my website";
+  }
+  $paramVariables = "?installSuccess=true&serverName=".$sNP."&serverDesc=".$sDP."&mvc=".$eMVCP."";
+}
 ?>
 
 <script>
@@ -24,7 +53,7 @@ if(isset($installSuccess)){
     alert("Loading installation.");
     alert("Installation complete. Please do not delete this file as it is still required for PHPDoge to run.\
           View your application live at: <?=$actual_link?>");
-    $.get("/config.php?installSuccess=true");
+    $.get("/config.php<?=$paramVariables?>"); // Load whatever gets submitted from form
   }
 </script>
 
@@ -36,8 +65,8 @@ if(isset($installSuccess)){
         <p>Automatically configure your website by installing PHPDoge</p>
           <p>If you use install.php to install PHPDoge, config.php will be manually initialized.</p>
       <div class="card-divider"></div>
-      
-      <form action="#" method="GET">
+
+      <form action="#" method="POST">
           <input type="text" name="serverName" class="form-control" placeholder="Project name"><br>
           <input type="checkbox" id="mvc1" name="mvc1" class="form-control" value="Enable MVC"><br>
         <textarea type="text" name="projectDescription" class="form-control" placeholder="Project description"></textarea><br>
