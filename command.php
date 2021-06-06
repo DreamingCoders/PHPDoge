@@ -1,5 +1,5 @@
 <?php
-include($_SERVER['DOCUMENT_ROOT']."doge.php");
+include($_SERVER['DOCUMENT_ROOT']."/core/doge.php");
 ?>
 
 <div class="container">
@@ -7,10 +7,21 @@ include($_SERVER['DOCUMENT_ROOT']."doge.php");
 <?php
 // Automatic execution
 if(isset($_GET['auto'])){
-  $addYourDogeCode = "";
+  $addYourDogeCode = htmlspecialchars($_GET['c']);
   
   if(strlen($addYourDogeCode >= 5)){
-    echo"<script>window.location.replace('/doge.php?c=".$addYourDogeCode."');</script>";
+    echo"<script>window.location.replace('/doge.php?c=".$addYourDogeCode."');</script>"; //changed mind instead route it here much cleaner
+      // return text here in future
+    
+    if(!isset($dogeOutput)){
+        $dogeOutput = "Null";
+    }
+    ?>
+    <h5>Your DogeCode</h5>
+      <code><?=htmlspecialchars($addYourDogeCode)?>
+    <h5>Your DogeCode converted to PHP</h5>
+      <code><?=htmlspecialchars($dogeOutput)?>
+    <?php
   }
 }
 // Manual execution
