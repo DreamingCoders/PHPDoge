@@ -10,7 +10,7 @@ if(isset($_GET['auto'])){
   $addYourDogeCode = htmlspecialchars($_GET['c']);
   
   if(strlen($addYourDogeCode >= 5)){
-    echo"<script>window.location.replace('/doge.php?c=".$addYourDogeCode."');</script>"; //changed mind instead route it here much cleaner
+    //echo"<script>window.location.replace('/doge.php?c=".$addYourDogeCode."');</script>"; //changed mind instead route it here much cleaner
       // return text here in future
     
     if(!isset($dogeOutput)){
@@ -20,7 +20,7 @@ if(isset($_GET['auto'])){
     <h5>Your DogeCode</h5>
       <code><?=htmlspecialchars($addYourDogeCode)?>
     <h5>Your DogeCode converted to PHP</h5>
-      <code><?=htmlspecialchars($dogeOutput)?>
+      <code><?=htmlspecialchars($rewriteALG) // if this doesnt work wrap it as function forgot what I called it from other page?>
     <?php
   }
 }
