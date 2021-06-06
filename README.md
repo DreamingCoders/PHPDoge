@@ -52,8 +52,9 @@ ROUTER::get('/api/user/:id',function($req,$res){
     // $req['params]=>['id'='111']
     
 });
+```
 In the example we are capturing using
-
+```php
 // URL => /flight/india-usa
 
 ROUTER::get('/flight/:from-:to',function($req,$res){
